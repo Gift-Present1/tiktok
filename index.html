@@ -4,257 +4,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公式プレゼント</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <title>筋トレしてダイエット増進 | おすすめ筋トレ3選</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
 ```
-<style>
-    :root {
-        --primary: #2563eb;
-        --primary-dark: #1d4ed8;
-        --accent: #f59e0b;
-        --bg-main: #f8fafc;
-        --bg-secondary: #ffffff;
-        --text-primary: #1e293b;
-        --text-secondary: #64748b;
-        --border-color: #e2e8f0;
-        --shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
     body {
-        font-family: 'Noto Sans JP', sans-serif;
-        background: var(--bg-main);
-        color: var(--text-primary);
-        line-height: 1.8;
-        overflow-x: hidden;
-    }
-
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-        position: relative;
-        z-index: 1;
+        font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+        line-height: 1.6;
+        color: #333;
     }
 
     .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 80px 20px;
         text-align: center;
-        padding: 100px 0 80px;
-        background: linear-gradient(180deg, #f5e6d3 0%, var(--bg-main) 100%);
         position: relative;
+        overflow: hidden;
     }
 
     .hero::before {
         content: '';
         position: absolute;
-        top: 20%;
-        left: 10%;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(circle, rgba(255, 192, 203, 0.3) 0%, transparent 70%);
-        border-radius: 50%;
-        filter: blur(60px);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"></path></svg>') no-repeat bottom;
+        background-size: cover;
+        opacity: 0.1;
     }
-
-    .hero::after {
-        content: '';
-        position: absolute;
-        top: 30%;
-        right: 10%;
-        width: 350px;
-        height: 350px;
-        background: radial-gradient(circle, rgba(255, 192, 203, 0.25) 0%, transparent 70%);
-        border-radius: 50%;
-        filter: blur(80px);
-    }
-
-    .gift-icon {
-        width: 280px;
-        height: 280px;
-        margin: 0 auto 40px;
-        position: relative;
-        z-index: 1;
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
-    }
-
-    .gift-box-body {
-        width: 220px;
-        height: 220px;
-        background: #ffd700;
-        border: 8px solid #3d4852;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .gift-box-present {
-        width: 160px;
-        height: 160px;
-        background: repeating-linear-gradient(45deg, #ffd700, #ffd700 10px, #ffffff 10px, #ffffff 20px);
-        border: 6px solid #3d4852;
-        border-radius: 12px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .gift-ribbon-h { width: 100%; height: 40px; background: #ffd700; position: absolute; top: 50%; left: 0; transform: translateY(-50%); border-top: 4px solid #3d4852; border-bottom: 4px solid #3d4852; }
-    .gift-ribbon-v { width: 40px; height: 100%; background: #ffd700; position: absolute; top: 0; left: 50%; transform: translateX(-50%); border-left: 4px solid #3d4852; border-right: 4px solid #3d4852; }
-    
-    .gift-bow {
-        position: absolute;
-        top: -25px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 6px;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    }
-    .bow-left, .bow-right { width: 38px; height: 38px; background: #ffd700; border: 5px solid #3d4852; border-radius: 50%; }
-    .bow-center { width: 22px; height: 22px; background: #ffd700; border: 4px solid #3d4852; }
 
     .hero h1 {
-        font-size: clamp(2.2rem, 6vw, 3.5rem);
-        font-weight: 900;
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero .subtitle {
+        font-size: 1.5em;
         margin-bottom: 30px;
-        color: #2d3748;
-        letter-spacing: 0.1em;
         position: relative;
         z-index: 1;
     }
 
-    .hero-subtitle {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        color: #4a5568;
-        margin-bottom: 40px;
-        font-weight: 500;
-    }
-
-    .cta-button {
+    .hero .cta {
         display: inline-block;
-        padding: 22px 60px;
-        background: linear-gradient(180deg, #ff6b35 0%, #ff4500 100%);
-        color: #ffffff;
+        padding: 15px 40px;
+        background: #ff6b6b;
+        color: white;
         text-decoration: none;
-        font-size: 1.4rem;
-        font-weight: 900;
-        border-radius: 16px;
-        border: 4px solid #3d4852;
-        box-shadow: 0 8px 0 #3d4852, 0 12px 24px rgba(255, 69, 0, 0.4);
-        transition: all 0.2s ease;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         position: relative;
         z-index: 1;
     }
 
-    .cta-button:hover {
-        transform: translateY(3px);
-        box-shadow: 0 5px 0 #3d4852, 0 9px 20px rgba(255, 69, 0, 0.4);
+    .hero .cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
-    .section { padding: 60px 0; }
-    .section-title {
-        font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+    .benefits {
+        padding: 60px 20px;
+        background: #f8f9fa;
         text-align: center;
-        margin-bottom: 48px;
-        background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
-    .card-grid {
+    .benefits h2 {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+        color: #667eea;
+    }
+
+    .benefit-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    .card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px 28px; }
-    .legal-section { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin-bottom: 32px; }
+    .benefit-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
 
-    .scroll-animate { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+    .benefit-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .benefit-icon {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .workouts {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .workouts h2 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 60px;
+        color: #333;
+    }
+
+    .workout-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+        padding: 40px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+
+    .workout-card:hover {
+        transform: scale(1.02);
+    }
+
+    .workout-card:nth-child(even) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .workout-card:nth-child(even) .workout-image {
+        order: 2;
+    }
+
+    .workout-image {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5em;
+        color: white;
+        min-height: 300px;
+    }
+
+    .workout-content h3 {
+        font-size: 2em;
+        color: #667eea;
+        margin-bottom: 20px;
+    }
+
+    .workout-number {
+        display: inline-block;
+        background: #ff6b6b;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+
+    .workout-content p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        line-height: 1.8;
+    }
+
+    .workout-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .workout-content li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 1.05em;
+    }
+
+    .workout-content li:before {
+        content: '✓ ';
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .cta-section p {
+        font-size: 1.3em;
+        margin-bottom: 40px;
+    }
+
+    .cta-section button {
+        padding: 20px 50px;
+        font-size: 1.3em;
+        background: white;
+        color: #f5576c;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .cta-section button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
 
     @media (max-width: 768px) {
-        .hero h1 { font-size: 2rem; }
-        .cta-button { padding: 18px 40px; font-size: 1.2rem; }
+        .hero h1 {
+            font-size: 2em;
+        }
+
+        .workout-card {
+            grid-template-columns: 1fr !important;
+            padding: 20px;
+        }
+
+        .workout-card:nth-child(even) .workout-image {
+            order: 1;
+        }
+
+        .workout-image {
+            min-height: 200px;
+            font-size: 3em;
+        }
     }
 </style>
 ```
 
 </head>
 <body>
-    <div class="container">
-        <section class="hero">
-            <div class="gift-icon">
-                <div class="gift-box-body">
-                    <div class="gift-box-present">
-                        <div class="gift-ribbon-h"></div>
-                        <div class="gift-ribbon-v"></div>
-                    </div>
-                </div>
-                <div class="gift-bow">
-                    <div class="bow-left"></div>
-                    <div class="bow-center"></div>
-                    <div class="bow-right"></div>
-                </div>
-            </div>
-            <h1>プレゼント公式</h1>
-            <p class="hero-subtitle">公式ラインを追加して賞品をゲットしよう！</p>
+    <div class="hero">
+        <h1>💪 筋トレしてダイエット増進</h1>
+        <p class="subtitle">効果的な筋トレで理想のボディを手に入れよう!</p>
+        <a href="#workouts" class="cta">おすすめ筋トレ3選を見る</a>
+    </div>
 
 ```
-        <a href="https://lin.ee/Oo1fqBM" class="cta-button" onclick="ttq.track('ClickButton')">今すぐ受け取る</a>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">キャンペーンの仕組み</h2>
-        <div class="card-grid">
-            <div class="card scroll-animate">
-                <h3>💰 広告収入の還元</h3>
-                <p>広告収入の一部を、賞品購入の資金として活用しています。</p>
-            </div>
-            <div class="card scroll-animate">
-                <h3>🤝 協賛企業からの支援</h3>
-                <p>製品を特別価格で提供してくださっています。</p>
-            </div>
-            <div class="card scroll-animate">
-                <h3>❤️ 社会貢献の一環</h3>
-                <p>利益の一部を還元することで、皆さまに幸せをお届けしたいと考えています。</p>
-            </div>
+<div class="benefits">
+    <h2>筋トレがダイエットに効果的な理由</h2>
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon">🔥</div>
+            <h3>基礎代謝UP</h3>
+            <p>筋肉量が増えることで、何もしていない時でもカロリーを消費しやすい体に!</p>
         </div>
-    </section>
-
-    <section class="section">
-        <div class="legal-section">
-            <h2>【特定商取引法に基づく表記】</h2>
-            <p>・事業者名: 株式会社GIFT</p>
-            <p>・所在地: 〒141-0022 東京都品川区東五反田2-5-2</p>
+        <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>脂肪燃焼効果</h3>
+            <p>運動後も脂肪が燃え続ける「アフターバーン効果」で効率的に痩せる!</p>
         </div>
-    </section>
+        <div class="benefit-card">
+            <div class="benefit-icon">✨</div>
+            <h3>引き締まったボディ</h3>
+            <p>ただ痩せるだけでなく、メリハリのある美しいボディラインを作れる!</p>
+        </div>
+    </div>
 </div>
 
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+<div class="workouts" id="workouts">
+    <h2>🏆 おすすめの筋トレ3選</h2>
 
-    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
-</script>
+    <div class="workout-card">
+        <div class="workout-image">🦵</div>
+        <div class="workout-content">
+            <span class="workout-number">NO.1</span>
+            <h3>スクワット</h3>
+            <p>下半身の大きな筋肉を鍛えることで、最も効率的にカロリーを消費できる王道トレーニング!</p>
+            <ul>
+                <li>太もも・お尻・体幹を同時に鍛えられる</li>
+                <li>基礎代謝を大幅にアップ</li>
+                <li>ヒップアップ効果抜群</li>
+                <li>初心者でも自宅で簡単にできる</li>
+            </ul>
+            <p><strong>目安:</strong> 1セット15〜20回 × 3セット</p>
+        </div>
+    </div>
+
+    <div class="workout-card">
+        <div class="workout-image">💪</div>
+        <div class="workout-content">
+            <span class="workout-number">NO.2</span>
+            <h3>プランク</h3>
+            <p>体幹を鍛えて姿勢を改善し、ぽっこりお腹を解消!代謝アップにも効果的な万能トレーニング。</p>
+            <ul>
+                <li>お腹周りを集中的に引き締め</li>
+                <li>姿勢改善で見た目が変わる</li>
+                <li>腰痛予防にも効果的</li>
+                <li>場所を取らず、静かにできる</li>
+            </ul>
+            <p><strong>目安:</strong> 30秒〜1分キープ × 3セット</p>
+        </div>
+    </div>
+
+    <div class="workout-card">
+        <div class="workout-image">🏋️</div>
+        <div class="workout-content">
+            <span class="workout-number">NO.3</span>
+            <h3>プッシュアップ(腕立て伏せ)</h3>
+            <p>上半身全体を鍛えて、メリハリのある引き締まった体を作る!二の腕のたるみにも効果大。</p>
+            <ul>
+                <li>胸・肩・腕・体幹を同時に鍛える</li>
+                <li>二の腕のたるみ解消</li>
+                <li>バストアップ効果</li>
+                <li>膝をついた状態から始められる</li>
+            </ul>
+            <p><strong>目安:</strong> 1セット10〜15回 × 3セット</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2>今日から始めよう!</h2>
+    <p>この3つの筋トレを週3回続けるだけで、<br>2ヶ月後には確実に体が変わります!</p>
+    <button onclick="alert('さあ、今すぐ始めましょう!💪')">今すぐスタート!</button>
+</div>
 ```
 
 </body>
