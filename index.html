@@ -1,350 +1,98 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>筋トレしてダイエット増進 | おすすめ筋トレ3選</title>
+    <title>Healthy Life Log | 毎日の健康習慣</title>
+    <meta name="description" content="健康的な生活習慣を身につけるためのヒントや、日々の運動記録を発信するブログです。">
     <style>
-        * {
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f9f9f9;
         }
-
-```
-    body {
-        font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-        line-height: 1.6;
-        color: #333;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 80px 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"></path></svg>') no-repeat bottom;
-        background-size: cover;
-        opacity: 0.1;
-    }
-
-    .hero h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero .subtitle {
-        font-size: 1.5em;
-        margin-bottom: 30px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero .cta {
-        display: inline-block;
-        padding: 15px 40px;
-        background: #ff6b6b;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 1.2em;
-        font-weight: bold;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero .cta:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-
-    .benefits {
-        padding: 60px 20px;
-        background: #f8f9fa;
-        text-align: center;
-    }
-
-    .benefits h2 {
-        font-size: 2.5em;
-        margin-bottom: 50px;
-        color: #667eea;
-    }
-
-    .benefit-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .benefit-card {
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
-
-    .benefit-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .benefit-icon {
-        font-size: 3em;
-        margin-bottom: 15px;
-    }
-
-    .workouts {
-        padding: 80px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .workouts h2 {
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 60px;
-        color: #333;
-    }
-
-    .workout-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        margin-bottom: 60px;
-        padding: 40px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
-
-    .workout-card:hover {
-        transform: scale(1.02);
-    }
-
-    .workout-card:nth-child(even) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .workout-card:nth-child(even) .workout-image {
-        order: 2;
-    }
-
-    .workout-image {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5em;
-        color: white;
-        min-height: 300px;
-    }
-
-    .workout-content h3 {
-        font-size: 2em;
-        color: #667eea;
-        margin-bottom: 20px;
-    }
-
-    .workout-number {
-        display: inline-block;
-        background: #ff6b6b;
-        color: white;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 0.8em;
-        margin-bottom: 10px;
-    }
-
-    .workout-content p {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-        line-height: 1.8;
-    }
-
-    .workout-content ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    .workout-content li {
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-        font-size: 1.05em;
-    }
-
-    .workout-content li:before {
-        content: '✓ ';
-        color: #667eea;
-        font-weight: bold;
-        margin-right: 10px;
-    }
-
-    .cta-section {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        padding: 80px 20px;
-        text-align: center;
-        color: white;
-    }
-
-    .cta-section h2 {
-        font-size: 2.5em;
-        margin-bottom: 30px;
-    }
-
-    .cta-section p {
-        font-size: 1.3em;
-        margin-bottom: 40px;
-    }
-
-    .cta-section button {
-        padding: 20px 50px;
-        font-size: 1.3em;
-        background: white;
-        color: #f5576c;
-        border: none;
-        border-radius: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    .cta-section button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2em;
-        }
-
-        .workout-card {
-            grid-template-columns: 1fr !important;
+        header {
+            background: #fff;
             padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
         }
-
-        .workout-card:nth-child(even) .workout-image {
-            order: 1;
+        h1 {
+            margin: 0;
+            font-size: 22px;
+            color: #2c3e50;
         }
-
-        .workout-image {
-            min-height: 200px;
-            font-size: 3em;
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-    }
-</style>
-```
-
+        h2 {
+            font-size: 18px;
+            border-left: 4px solid #4CAF50; /* 健康的な緑色 */
+            padding-left: 10px;
+            margin-top: 30px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        .policy-section {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>💪 筋トレしてダイエット増進</h1>
-        <p class="subtitle">効果的な筋トレで理想のボディを手に入れよう!</p>
-        <a href="#workouts" class="cta">おすすめ筋トレ3選を見る</a>
-    </div>
 
-```
-<div class="benefits">
-    <h2>筋トレがダイエットに効果的な理由</h2>
-    <div class="benefit-grid">
-        <div class="benefit-card">
-            <div class="benefit-icon">🔥</div>
-            <h3>基礎代謝UP</h3>
-            <p>筋肉量が増えることで、何もしていない時でもカロリーを消費しやすい体に!</p>
-        </div>
-        <div class="benefit-card">
-            <div class="benefit-icon">⚡</div>
-            <h3>脂肪燃焼効果</h3>
-            <p>運動後も脂肪が燃え続ける「アフターバーン効果」で効率的に痩せる!</p>
-        </div>
-        <div class="benefit-card">
-            <div class="benefit-icon">✨</div>
-            <h3>引き締まったボディ</h3>
-            <p>ただ痩せるだけでなく、メリハリのある美しいボディラインを作れる!</p>
-        </div>
-    </div>
-</div>
+    <header>
+        <h1>Healthy Life Log</h1>
+    </header>
 
-<div class="workouts" id="workouts">
-    <h2>🏆 おすすめの筋トレ3選</h2>
+    <div class="container">
+        <p>デスクワーク中心の現代人に向けて、無理なく続けられる「健康的な生活習慣」をテーマに情報を発信しています。</p>
 
-    <div class="workout-card">
-        <div class="workout-image">🦵</div>
-        <div class="workout-content">
-            <span class="workout-number">NO.1</span>
-            <h3>スクワット</h3>
-            <p>下半身の大きな筋肉を鍛えることで、最も効率的にカロリーを消費できる王道トレーニング!</p>
-            <ul>
-                <li>太もも・お尻・体幹を同時に鍛えられる</li>
-                <li>基礎代謝を大幅にアップ</li>
-                <li>ヒップアップ効果抜群</li>
-                <li>初心者でも自宅で簡単にできる</li>
-            </ul>
-            <p><strong>目安:</strong> 1セット15〜20回 × 3セット</p>
+        <h2>運動を習慣化するコツ</h2>
+        <p>「激しい運動」ではなく「続けられる運動」が鍵です。1日10分のストレッチやスクワットでも、継続することで身体のリズムが整い、仕事のパフォーマンス向上にも繋がります。</p>
+
+        <h2>私が実践しているリフレッシュ法</h2>
+        <p>朝一番の軽い運動と、就寝前のストレッチを取り入れています。これにより睡眠の質が向上し、翌朝のスッキリ感に違いが出ると感じています。</p>
+        
+        <p>当ブログでは、こうした日々の気づきや実践記録をシェアしていきます。</p>
+
+        <div class="policy-section">
+            <h3>プライバシーポリシー</h3>
+            <p><strong>個人情報の利用目的</strong><br>
+            当ブログでは、お問い合わせや記事へのコメントの際、お名前やメールアドレス等の個人情報をご入力いただく場合がございます。取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用いたしません。</p>
+            
+            <p><strong>免責事項</strong><br>
+            当ブログからのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。また当ブログのコンテンツ・情報について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。</p>
+            
+            <p><strong>運営者情報</strong><br>
+            運営：Healthy Life Log 編集部<br>
+            お問い合わせ：info@example.com</p>
         </div>
     </div>
 
-    <div class="workout-card">
-        <div class="workout-image">💪</div>
-        <div class="workout-content">
-            <span class="workout-number">NO.2</span>
-            <h3>プランク</h3>
-            <p>体幹を鍛えて姿勢を改善し、ぽっこりお腹を解消!代謝アップにも効果的な万能トレーニング。</p>
-            <ul>
-                <li>お腹周りを集中的に引き締め</li>
-                <li>姿勢改善で見た目が変わる</li>
-                <li>腰痛予防にも効果的</li>
-                <li>場所を取らず、静かにできる</li>
-            </ul>
-            <p><strong>目安:</strong> 30秒〜1分キープ × 3セット</p>
-        </div>
-    </div>
-
-    <div class="workout-card">
-        <div class="workout-image">🏋️</div>
-        <div class="workout-content">
-            <span class="workout-number">NO.3</span>
-            <h3>プッシュアップ(腕立て伏せ)</h3>
-            <p>上半身全体を鍛えて、メリハリのある引き締まった体を作る!二の腕のたるみにも効果大。</p>
-            <ul>
-                <li>胸・肩・腕・体幹を同時に鍛える</li>
-                <li>二の腕のたるみ解消</li>
-                <li>バストアップ効果</li>
-                <li>膝をついた状態から始められる</li>
-            </ul>
-            <p><strong>目安:</strong> 1セット10〜15回 × 3セット</p>
-        </div>
-    </div>
-</div>
-
-<div class="cta-section">
-    <h2>今日から始めよう!</h2>
-    <p>この3つの筋トレを週3回続けるだけで、<br>2ヶ月後には確実に体が変わります!</p>
-    <button onclick="alert('さあ、今すぐ始めましょう!💪')">今すぐスタート!</button>
-</div>
-```
+    <footer>
+        <p>&copy; 2026 Healthy Life Log. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
